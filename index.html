@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Main.css" />
+    <title>Game</title>
+  </head>
+  <body>
+    <div id="start">
+      <div id="settings">
+        <label for="playersNum">Choose number of players: (1-4)</label>
+        <input
+          type="number"
+          id="playersNum"
+          name="playersNum"
+          min="1"
+          max="4"
+          value="2"
+        />
+      </br>
+        <label for="cardsNum">Choose number of treasure cards: </label>
+        <input
+          type="number"
+          id="cardsNum"
+          name="cardsNum"
+          min="1"
+          max="12"
+          value="2"
+        />
+      </br>
+
+        <button id="startGame">Start Game</button>
+      </div>
+      <div id="instructions">
+        <p>To start the game select the number of players (1-4) and the
+        number of cards per player (1 - 24/number of players) after that
+        click the start new game button to initialize a new game.</p>
+        <br />
+        <br />
+        <p>During the game each player has to find their revealed treasure
+        card. The player tries to get to the room showing the same
+        treasure as on this card. Each turn the player has to slide the
+        rooms by clicking the respective arrow button, after that the
+        player will be able to move their playing piece</p>
+
+        <h3>Sliding</h3>
+        <p>The player inserts the extra room into the game board where one of
+        the arrows shows the slidable rows and columns, until another room
+        is pushed out of the maze on the opposite side.</p>
+        <h3>Extra rules</h3>
+
+        <ul>
+          <li>
+            <p>The room cannot be inserted back into the board at the same
+            place where it was pushed out.</p>
+          </li>
+          <li><p>Player can rollback after moving their playing piece</p></li>
+          <li>
+            <p>If the room you push out has a playing piece on it, put this
+            piece on the opposite side of the board on the room that was
+            just placed.</p>
+          </li>
+          <li>
+            <p>Treasures always move with the rooms.The game is over as soon
+            as a player has found all their treasure cards and returned
+            their playing piece to its starting position.</p>
+          </li>
+        </ul>
+        <h3>Game Over</h3>
+        <p>The first player to reach all their treasures and go back to their
+        initial position wins the game.</p>
+      </div>
+    </div>
+    <div class="game" style="display: none">
+      <table id="board"></table>
+      <div id="extraRoom">
+        <table>
+          <tr>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div id="gameInfo"></div>
+    </div>
+  </body>
+  <script type="module" src="main.js"></script>
+</html>

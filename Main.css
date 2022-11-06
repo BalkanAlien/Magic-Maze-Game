@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+#start #settings {
+  background-color: #0a061d;
+  padding: 20px;
+  width: 50%;
+  color: #fff;
+  border-radius: 10px;
+}
+
+#start #settings label {
+  font-size: 30px;
+}
+
+#start #settings input {
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  margin: 20px;
+}
+
+#start #settings #startGame {
+  padding: 8px 20px;
+  outline: none;
+  border-radius: 20px;
+  border: none;
+  color: #110a31;
+  background-color: #fff;
+  font-size: 25px;
+  margin: 20px;
+}
+
+#start #settings #startGame:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #fff;
+  background-color: #0a664a;
+}
+
+#start #instructions {
+  background-color: #0a061d;
+  color: #fff;
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+.game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.game table {
+  display: block;
+  position: relative;
+  background-color: #0a061d;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  text-indent: 0%;
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.game table .top-arrows,
+.game table .down-arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  font-size: 50px;
+  color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  text-indent: 0%;
+  margin: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.game table .top-arrows button,
+.game table .down-arrows button {
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #0a664a;
+  color: #fff;
+}
+
+.game table .top-arrows button:hover,
+.game table .down-arrows button:hover {
+  background-color: rgba(10, 102, 74, 0.664);
+}
+
+.game table .top-arrows button:disabled,
+.game table .down-arrows button:disabled {
+  background-color: gray;
+}
+
+.game table .top-arrows tr td,
+.game table .down-arrows tr td {
+  cursor: pointer;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  text-indent: 0%;
+  margin: 0;
+}
+
+.game table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game table tr .left-arrow,
+.game table tr .right-arrow {
+  cursor: pointer;
+  font-size: 50px;
+  color: #fff;
+  margin: 0;
+  font-size: 50px;
+}
+
+.game table tr .left-arrow button,
+.game table tr .right-arrow button {
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #0a664a;
+  color: #fff;
+}
+
+.game table tr .left-arrow button:hover,
+.game table tr .right-arrow button:hover {
+  background-color: rgba(10, 102, 74, 0.801);
+}
+
+.game table tr .left-arrow button:disabled,
+.game table tr .right-arrow button:disabled {
+  background-color: gray;
+}
+
+.game table tr td {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.game table tr td img {
+  display: block;
+  width: 100px;
+  margin: 1px;
+}
+
+.game table tr td .players {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  font-size: 30px;
+}
+
+.game table tr td .players .player {
+  position: relative;
+}
+
+.game table tr td .card {
+  cursor: pointer;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+.game #extraRoom {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: red;
+}
+
+.game #gameInfo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #0a061d;
+  padding: 100px;
+  font-size: 30px;
+  border-radius: 20px;
+  color: #fff;
+  margin: 20px;
+}
+
+tbody {
+  border-collapse: collapse;
+}
+/*# sourceMappingURL=Main.css.map */
+
+p {
+  font-size: medium;
+}
