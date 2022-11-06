@@ -1,58 +1,19 @@
-Marija Turmakoska
-JQGYIS
-Web-programming - JavaScript home assignment
-This solution was submitted by the student named above
-for a Web-programming assignment.
-Hereby I declare that the solution is my own work.
-I did not copy or use solutions from a third party.
-I did not share this solution with fellow students and I did not publish it.
-According to the Academic Regulations for Students
-(Eötvös Loránd University Organizational and Operational Regulations –
-Volume 2, Section 74/C), a student purposing the intellectual property of others
-as their own [...] is committing a disciplinary offence.
+Once upon a time, there was a king, who had a beautiful daughter. The princess had a lot of wooer, and a king was struggling whom to choose. Finally an idea came into his mind. The castle had a magical maze, where the rooms can change their positions. There are treasures hidden in the rooms, and whichever wooer collects his treasures first, he wins the princess's hand.
 
-The worst result of a disciplinary offence can be the expulsion of the student.
+How to play the game
+The rooms int maze are symbolized by a 7x7 square grid cells. For each room we know that which wall has a door. If there are two doors in the contact wall of two neighbouring rooms, you can go from one room to another. The even rows and columns in the grid can be slided, the other rooms are fixed throughout the game. By sliding the rooms in the grid, doors and passages open through which players can move in the maze. By cleverly sliding the rooms players try to find their way to the treasures. The first player to find all their treasures and return to the starting square is the winner.
 
-Minimum requirements (8 points)
+At the beginning of the game we put the rooms in random order and in random direction to the free fields of the game board. There should be one room remaining. During the game we will always use the extra room to slide the rest of the rooms. In the game you have to find up to 24 treasures. These are randomly placed on the board so that only one treasure can be in a room and can not be placed in the corner. For each treasure there is a card. We shuffle these treasure cards and divide them evenly among the players and revealing the top card. Playing pieces are placed in separate corners of the board.
 
-[x] Other: The `README.md` file from the _Other requirements_ section is filled with your data and included with your solution (0 point)
-[x] Game board: The game board appears (0 point)
-[x] Game board: The fix elements appear in a 7x7 grid (1 point)
-[x] Game board: In the same grid the movable elements appear randomly rotated and randomly placed (2 points)
-[x] Game board: There are at least 3 treasures in the grid (except the corners (0,5 point)
-[x] Game board: There is at least 1 playing piece in the grid (0,5 point)
-[x] Moving maze: The extra room can be slided into a slidable row or column. The rooms change well. (2 points)
-[x] Moving playing piece: We can move the playing piece to one of the possible neighboring room (2 points)
+During the game each player has to find his/her revealed treasure card (that can be seen by others). The player tries to get to the room showing the same treasure as on this card. For this the player needs to
 
-Basic tasks (12 points)
+  1. move the maze, and after that
+  2. move the playing piece.
+  3. 
+Moving the maze is done as follows: the player inserts the extra room into the game board where one of the arrows shows the slidable rows and columns, until another room is pushed out of the maze on the opposite side. The only exception: The room cannot be inserted back into the board at the same place where it was pushed out. So you cannot undo the previous player's move. If the room you push out has a playing piece on it, put this piece on the opposite side of the board on the room that was just placed. The treasures always move with the rooms.
 
-[x] Start screen: setting the number of players (0,5 point)
-[x] Start screen: setting the number of treasure cards per player (0,5 point)
-[x] Start screen: clicking the start button the game board appears (0,5 point)
-[x] Start screen: the game instructions can be seen (0,5 point)
-[x] Game board: treasures appear in accordance with the settings (0,5 point)
-[x] Game board: playing pieces appear in the corners (0,5 point)
-[x] Game board: extra room appears (0,5 point)
-[x] Game board: player information appear (0,5 point)
-[x] Game board: the actual player is indicated (0,5 point)
-[x] Moving maze: extra room can be rotated before sliding (0,5 point)
-[ ] Moving maze: sliding the rooms is done with animation (1 point)
-[x] Moving maze: treasures stays in the same rooms as they were initially placed (0,5 point)
-[x] Moving maze: fallen playing piece moves to the other side (0,5 point)
-[x] Moving playing piece: highlighting the accessible rooms (0,5 point)
-[ ] Moving playing piece: moving is done with animation (1 point)
-[x] Moving playing piece: if we reach the needed treasure, the player information changes correctly (0,5 point)
-[x] Moving playing piece: if every treasure is collected and we step to the initial position, the game is over (0,5 point)
-[x] Moving playing piece: multiple playing piece in one room appear correctly (0,5 point)
-[x] Game over: clicking a button we can start the game from the beginning (0,5 point)
-[x] Other: Demanding design (1 point)
-[ ] **Missing the deadline by a week (-3 points)**
-[ ] **Missing the deadline by two weeks (-6 points)**
-[ ] **Missing the deadline by more than two weeks (rejected assignment and no grade)**
+Once you have moved the maze, you can move your playing piece. You can occupy any square that you can move your piece to directly, without interruption. You can move your playing piece as far as you like. Or, you can leave your playing piece where it is. There can be more than one playing piece in one room: playing pieces do not hit each other. If you are unable to get to the treasure you are searching for, you can move your playing piece into a position that gives you a good starting point for your next turn. Once you find the treasure you are looking for, reveal your next treasure card. On your next turn, find your way to this treasure on the game board.
 
-Extra tasks (extra 5 point)
+Now it’s the next player’s turn. This player inserts the extra room into the game board before moving their playing piece, and so on.
 
-[x] Moving playing piece: highlighting all accessible rooms (3 point)
-[x] Save game: during the game the actual state can be saved (0,5 point)
-[ ] Save game: if there is a saved game, this information appears on the start screen (0,5 point)
-[ ] Save game: the saved can be loaded from the start screen (1 point)
+The game is over as soon as a player has found all their treasure cards and returned their playing piece to its starting position. The first player to do this is the winner.
